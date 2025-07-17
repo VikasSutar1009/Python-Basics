@@ -1,0 +1,5 @@
+mobiles=("apple","sumsung","vivo","oppo","nokia")
+y=list(mobiles)
+y.remove("nokia")
+x=tuple(y)
+print(x)
