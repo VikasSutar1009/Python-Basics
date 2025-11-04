@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: arial;
+            margin: 40px;
+            background: #f7f9fb;
+        }
+
+        h1{
+            text-align: center;
+            color: #333;
+        }
+
+        table{
+            width: 70%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td{
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th{
+            background: #4caf50;
+            color: white;
+        }
+
+        tr:nth-child(even){
+            background: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee Derectory</h1>
+    <table>
+        <tr>
+            <th>Emp ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Salary</th>
+        </tr>
+        {% for emp in employees %}
+        <tr>
+            <td>{{emp.EmpId}}</td>
+            <td>{{emp.EmpName}}</td>
+            <td>{{emp.Department}}</td>
+            <td>{{emp.Salary}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
